@@ -1,0 +1,85 @@
+.page {
+    margin: 0 auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.accordion {
+    width: 87.5vw;
+    margin: 0 auto;
+}
+.title {
+    margin-top: 7vw;
+    margin-bottom: 0.3rem;
+}
+.meme {
+    display: block;
+    border-top: 2px gray solid;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+.meme:checked .meme-image {
+    display: block;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.4rem;
+    margin-top: 0.4rem;
+}
+.meme-image {
+    width: 53vw;
+    display: none;
+    margin: 0 auto;
+}
+.chek {
+    display: none;
+}
+.meme-icon {
+    width: 35px;
+    height: 35px;
+    fill: black;
+}
+@media (min-width: 820px) {
+    .page {
+        font-size: 1.2rem;
+    }
+    .meme {
+        color: blueviolet;
+    }
+    .meme:hover .meme-text {
+        color: black;
+    }
+    .meme:hover .meme-icon {
+        display: block;
+    }
+    .meme:hover .meme-image {
+        display: block;
+    }
+    .meme-icon {
+        display: none;
+     }
+}
+@media (min-width: 1920px) {
+    .page {
+        font-size: 2.8rem;
+    }
+    .title {
+        margin-top: 6vw;
+        margin-bottom: 1.5rem;
+    }
+    .meme {
+        margin-bottom: 1.5rem;
+    }
+    .container {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+    }
+    .meme-icon {
+       width: 80px;
+       height: 80px;
+    }
+    .meme-image {
+        width: 45vw;
+    }
+}
