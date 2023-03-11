@@ -1,9 +1,10 @@
 .page {
     margin: 0 auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: 1920px;
 }
 .accordion {
-    width: 87.5vw;
+    width: 87vw;
     margin: 0 auto;
 }
 .title {
@@ -16,9 +17,6 @@
     margin-bottom: 0.5rem;
     cursor: pointer;
 }
-.meme:checked .meme-image {
-    display: block;
-}
 .container {
     display: flex;
     flex-direction: row;
@@ -27,38 +25,68 @@
     margin-bottom: 0.4rem;
     margin-top: 0.4rem;
 }
+.meme-text {
+    margin-bottom: 0.3rem;
+}
 .meme-image {
-    width: 53vw;
-    display: none;
+    max-width: 0;
+    max-height: 0;
+    transition: 0.2s ease;
+    display: block;
     margin: 0 auto;
+}
+.chek:checked + .meme .meme-image {
+    max-width: 40vw;
+    max-height: 40vw;
+    transition: 0.4s ease;
+}
+.chek:checked + .meme {
+    color: black;
+}
+.chek:checked + .meme .meme-icon {
+    transform: rotate(45deg);
 }
 .chek {
     display: none;
 }
 .meme-icon {
-    width: 35px;
-    height: 35px;
+    width: 1.3em;
+    height: 1.3em;
     fill: black;
 }
 @media (min-width: 820px) {
     .page {
-        font-size: 1.2rem;
+        font-size: 2rem;
+    }
+    .accordion:hover .meme-icon {
+        display: block;
     }
     .meme {
         color: blueviolet;
     }
-    .meme:hover .meme-text {
+    .accordion:hover .meme-text {
         color: black;
     }
     .meme:hover .meme-icon {
-        display: block;
+        transform: rotate(45deg);
     }
     .meme:hover .meme-image {
-        display: block;
+        max-height: 40vw;
+        max-width: 40vw;
+        transition: 0.5s ease;
     }
     .meme-icon {
         display: none;
      }
+    .meme:active .meme-text {
+        color: blueviolet;
+    }
+    .meme:active .meme-icon {
+        fill: blueviolet;
+    }
+    .meme:active .meme-image {
+        opacity: 0.7;
+    }
 }
 @media (min-width: 1920px) {
     .page {
@@ -74,12 +102,5 @@
     .container {
         margin-bottom: 1rem;
         margin-top: 1rem;
-    }
-    .meme-icon {
-       width: 80px;
-       height: 80px;
-    }
-    .meme-image {
-        width: 45vw;
     }
 }
