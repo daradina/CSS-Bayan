@@ -62,13 +62,14 @@
         display: block;
     }
     .meme {
-        color: blueviolet;
+        color: rgb(81, 81, 156);
     }
     .accordion:hover .meme-text {
         color: black;
     }
     .meme:hover .meme-icon {
         transform: rotate(45deg);
+        transition: 0.5s ease;
     }
     .meme:hover .meme-image {
         max-height: 40vw;
@@ -79,10 +80,10 @@
         display: none;
      }
     .meme:active .meme-text {
-        color: blueviolet;
+        color: rgb(81, 81, 156);
     }
     .meme:active .meme-icon {
-        fill: blueviolet;
+        fill: rgb(81, 81, 156);
     }
     .meme:active .meme-image {
         opacity: 0.7;
