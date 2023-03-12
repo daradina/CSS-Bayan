@@ -16,6 +16,7 @@
     border-top: 2px gray solid;
     margin-bottom: 0.5rem;
     cursor: pointer;
+    color: rgb(81, 81, 156);
 }
 .container {
     display: flex;
@@ -45,6 +46,7 @@
 }
 .chek:checked + .meme .meme-icon {
     transform: rotate(45deg);
+    fill: black;
 }
 .chek {
     display: none;
@@ -52,10 +54,12 @@
 .meme-icon {
     width: 1.3em;
     height: 1.3em;
-    fill: black;
 }
 .meme:active .meme-text {
     color: rgb(81, 81, 156);
+}
+.meme-icon {
+    fill: rgb(81, 81, 156);
 }
 .meme:active .meme-icon {
     fill: rgb(81, 81, 156);
@@ -87,12 +91,16 @@
 @media (hover: hover) {
     .accordion:hover .meme-icon {
         display: block;
-    }
-    .meme {
-        color: rgb(81, 81, 156);
+        fill: black;
     }
     .accordion:hover .meme-text {
         color: black;
+    }
+    .meme:active .meme-text {
+        color: rgb(81, 81, 156);
+    }
+    .meme:active .meme-icon {
+        fill: rgb(81, 81, 156);
     }
     .meme:hover .meme-icon {
         transform: rotate(45deg);
